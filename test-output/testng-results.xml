@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="52849" started-at="2019-02-17T12:16:16Z" finished-at="2019-02-17T12:17:09Z">
+  <suite name="Default suite" duration-ms="60612" started-at="2019-03-30T04:53:39Z" finished-at="2019-03-30T04:54:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="52849" started-at="2019-02-17T12:16:16Z" finished-at="2019-02-17T12:17:09Z">
-      <class name="testCases.AdminPageTest">
-        <test-method status="PASS" signature="initMe()[pri:0, instance:testCases.AdminPageTest@5e5792a0]" name="initMe" is-config="true" duration-ms="26467" started-at="2019-02-17T12:16:16Z" finished-at="2019-02-17T12:16:42Z">
+    <test name="Default test" duration-ms="60612" started-at="2019-03-30T04:53:39Z" finished-at="2019-03-30T04:54:39Z">
+      <class name="testCases.LoginPageTest">
+        <test-method status="PASS" signature="initMe()[pri:0, instance:testCases.LoginPageTest@3ffc5af1]" name="initMe" is-config="true" duration-ms="37499" started-at="2019-03-30T04:53:39Z" finished-at="2019-03-30T04:54:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMe -->
-        <test-method status="PASS" signature="testAddUserAdminPage()[pri:0, instance:testCases.AdminPageTest@5e5792a0]" name="testAddUserAdminPage" duration-ms="16167" started-at="2019-02-17T12:16:42Z" finished-at="2019-02-17T12:16:59Z">
+        <test-method status="PASS" signature="testValidateUnSuccessfullLogin()[pri:0, instance:testCases.LoginPageTest@3ffc5af1]" name="testValidateUnSuccessfullLogin" duration-ms="23063" started-at="2019-03-30T04:54:16Z" finished-at="2019-03-30T04:54:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAddUserAdminPage -->
-        <test-method status="PASS" signature="closeMe()[pri:0, instance:testCases.AdminPageTest@5e5792a0]" name="closeMe" is-config="true" duration-ms="10182" started-at="2019-02-17T12:16:59Z" finished-at="2019-02-17T12:17:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeMe -->
-      </class> <!-- testCases.AdminPageTest -->
+        </test-method> <!-- testValidateUnSuccessfullLogin -->
+      </class> <!-- testCases.LoginPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

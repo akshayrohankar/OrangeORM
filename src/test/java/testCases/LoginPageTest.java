@@ -24,7 +24,6 @@ public class LoginPageTest extends base {
 		objLoginPage.LoginProcess();
 
 	}
-
 	
 	@Test(enabled=false)
 	public void testValidateSuccessfullLogin() throws InterruptedException {
