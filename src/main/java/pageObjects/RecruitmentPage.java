@@ -23,6 +23,7 @@ public class RecruitmentPage extends base {
 	By keywords = By.id("candidateSearch_keywords");
 	By fromDate = By.id("candidateSearch_fromDate");
 	By toDate = By.id("candidateSearch_toDate");
+	By methodAppl = By.id("candidateSearch_modeOfApplication");
 	By searchBtn = By.id("btnSrch");
 	By resetBtn = By.id("btnRst");
 	By addBtn = By.id("btnAdd");
@@ -80,6 +81,10 @@ public class RecruitmentPage extends base {
 		return driver.findElement(toDate);
 	}
 
+	public WebElement getMethodAppl() {
+		return driver.findElement(methodAppl);
+	}
+	
 	public WebElement getSearchBtn() {
 		return driver.findElement(searchBtn);
 	}

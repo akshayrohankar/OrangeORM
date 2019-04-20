@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="32611" started-at="2019-04-20T14:22:04Z" finished-at="2019-04-20T14:22:36Z">
+  <suite name="Default suite" duration-ms="29589" started-at="2019-04-20T18:45:52Z" finished-at="2019-04-20T18:46:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="32611" started-at="2019-04-20T14:22:04Z" finished-at="2019-04-20T14:22:36Z">
+    <test name="Default test" duration-ms="29589" started-at="2019-04-20T18:45:52Z" finished-at="2019-04-20T18:46:21Z">
       <class name="testCases.RecruitmentPageTest">
-        <test-method status="PASS" signature="initMe()[pri:0, instance:testCases.RecruitmentPageTest@3ffc5af1]" name="initMe" is-config="true" duration-ms="15648" started-at="2019-04-20T14:22:04Z" finished-at="2019-04-20T14:22:19Z">
+        <test-method status="PASS" signature="initMe()[pri:0, instance:testCases.RecruitmentPageTest@1bce4f0a]" name="initMe" is-config="true" duration-ms="10888" started-at="2019-04-20T18:45:52Z" finished-at="2019-04-20T18:46:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMe -->
-        <test-method status="PASS" signature="addCandidates()[pri:0, instance:testCases.RecruitmentPageTest@3ffc5af1]" name="addCandidates" duration-ms="16920" started-at="2019-04-20T14:22:19Z" finished-at="2019-04-20T14:22:36Z">
+        <test-method status="PASS" signature="searchCandidates()[pri:0, instance:testCases.RecruitmentPageTest@1bce4f0a]" name="searchCandidates" duration-ms="18676" started-at="2019-04-20T18:46:03Z" finished-at="2019-04-20T18:46:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addCandidates -->
+        </test-method> <!-- searchCandidates -->
       </class> <!-- testCases.RecruitmentPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
