@@ -1,13 +1,12 @@
 package testCases;
 
-import static org.testng.Assert.assertEquals;
-
 import java.io.IOException;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import pageObjects.LoginPage;
+import pageObjects.AdminPage;
+import pageObjects.RecruitmentPage;
 import resources.base;
 
 public class RecruitmentPageTest extends base {
@@ -17,16 +16,17 @@ public class RecruitmentPageTest extends base {
 
 		initializeDriver();
 	}
-
+	
 	@Test
-	public void testLoginPage() throws InterruptedException {
-		LoginPage objLoginPage = new LoginPage(driver, prop);
-		objLoginPage.LoginProcess();
-
+	public void addCandidates() throws InterruptedException {
+		RecruitmentPage objREcruitmentPage = new RecruitmentPage(driver, prop);
+		objREcruitmentPage.LoginProcess();
+		
+		AdminPage objAdmin = new AdminPage(driver, prop);
+		objAdmin.getRecruitmentTab().click();
+		
+		
 	}
-	
-	
-	
 	
 
 }

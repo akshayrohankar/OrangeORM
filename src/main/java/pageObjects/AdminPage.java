@@ -21,6 +21,7 @@ public class AdminPage extends base {
 	WebDriver driver;
 
 	By adminTab = By.xpath("//b[contains(text(),'Admin')]");
+	By RecruitmentTab = By.xpath("//b[contains(text(),'Recruitment')]");
 	By addBtn = By.xpath("//input[@id='btnAdd']");
 	By empName = By.xpath("//input[@id='systemUser_employeeName_empName']");
 	By userName = By.xpath("//input[@id='systemUser_userName']");
@@ -54,6 +55,10 @@ public class AdminPage extends base {
 
 	public WebElement getSaveBtn() {
 		return driver.findElement(saveBtn);
+	}
+	
+	public WebElement getRecruitmentTab() {
+		return driver.findElement(RecruitmentTab);
 	}
 
 	public void addUser() throws InterruptedException {
