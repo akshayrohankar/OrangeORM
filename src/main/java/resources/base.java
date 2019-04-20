@@ -16,7 +16,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class base {
 
 	public static WebDriver driver;
-	public Properties prop;
+	public static Properties prop;
 public WebDriver initializeDriver() throws IOException
 {
 	

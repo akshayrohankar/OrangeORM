@@ -1,7 +1,5 @@
 package pageObjects;
 
-import java.util.Properties;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -11,9 +9,8 @@ import resources.base;
 
 public class RecruitmentPage extends base {
 
-	public RecruitmentPage(WebDriver driver, Properties prop) {
+	public RecruitmentPage(WebDriver driver) {
 		this.driver = driver;
-		this.prop = prop;
 	}
 
 	WebDriver driver;

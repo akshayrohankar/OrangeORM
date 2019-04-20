@@ -15,14 +15,14 @@ public class AdminPageTest extends base {
 	public void initMe() throws IOException, InterruptedException {
 
 		initializeDriver();
-		LoginPage objLoginPage = new LoginPage(driver, prop);
+		LoginPage objLoginPage = new LoginPage(driver);
 		objLoginPage.LoginProcess();
 		
 	}
 
 	@Test
 	public void testAddUserAdminPage() throws InterruptedException {
-		AdminPage objAdminPage = new AdminPage(driver, prop);
+		AdminPage objAdminPage = new AdminPage(driver);
 		objAdminPage.addUser();
 		
 	}

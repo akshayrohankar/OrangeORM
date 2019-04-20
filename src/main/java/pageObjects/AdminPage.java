@@ -1,7 +1,6 @@
 package pageObjects;
 
 import java.util.List;
-import java.util.Properties;
 import java.util.Random;
 
 import org.openqa.selenium.By;
@@ -13,9 +12,8 @@ import resources.base;
 
 public class AdminPage extends base {
 
-	public AdminPage(WebDriver driver, Properties prop) {
+	public AdminPage(WebDriver driver) {
 		this.driver = driver;
-		this.prop = prop;
 	}
 
 	WebDriver driver;

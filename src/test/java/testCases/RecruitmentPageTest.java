@@ -19,11 +19,13 @@ public class RecruitmentPageTest extends base {
 	
 	@Test
 	public void addCandidates() throws InterruptedException {
-		RecruitmentPage objREcruitmentPage = new RecruitmentPage(driver, prop);
+		RecruitmentPage objREcruitmentPage = new RecruitmentPage(driver);
 		objREcruitmentPage.LoginProcess();
 		
-		AdminPage objAdmin = new AdminPage(driver, prop);
+		AdminPage objAdmin = new AdminPage(driver);
 		objAdmin.getRecruitmentTab().click();
+		
+		RecruitmentPage objRecruit = new RecruitmentPage(driver);
 		
 		
 	}

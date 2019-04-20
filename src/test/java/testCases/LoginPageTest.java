@@ -20,14 +20,14 @@ public class LoginPageTest extends base {
 
 	@Test(enabled=false)
 	public void testLoginPage() throws InterruptedException {
-		LoginPage objLoginPage = new LoginPage(driver, prop);
+		LoginPage objLoginPage = new LoginPage(driver);
 		objLoginPage.LoginProcess();
 
 	}
 	
 	@Test(enabled=false)
 	public void testValidateSuccessfullLogin() throws InterruptedException {
-		LoginPage objLoginPage = new LoginPage(driver, prop);
+		LoginPage objLoginPage = new LoginPage(driver);
 		objLoginPage.LoginProcess();
 		objLoginPage.ValidateSuccessfullLogin();
 		String actual = objLoginPage.ValidateSuccessfullLogin();
@@ -36,7 +36,7 @@ public class LoginPageTest extends base {
 
 	@Test
 	public void testValidateUnSuccessfullLogin() throws InterruptedException {
-		LoginPage objLoginPage = new LoginPage(driver, prop);
+		LoginPage objLoginPage = new LoginPage(driver);
 		objLoginPage.LoginProcess();
 		objLoginPage.ValidateUnSuccessfullLogin();
 		
