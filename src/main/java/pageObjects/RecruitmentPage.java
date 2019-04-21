@@ -46,12 +46,18 @@ public class RecruitmentPage extends base {
 	By addCandidate_comment = By.id("addCandidate_comment");
 	By addCandidate_appliedDate = By.id("addCandidate_appliedDate");
 	By addCandidate_consentToKeepData = By.id("addCandidate_consentToKeepData");
-	By btnSave = By.id("btnSave");
+	By saveCandidateBtn = By.id("btnSave");
+	By backToAddCandidate = By.id("btnBack");
+	
 	
 	By selectDate = By.xpath("//tr[1]//td[1]//a[1]");
 	
 	public WebElement getselectDate() {
 		return driver.findElement(selectDate);
+	}
+	
+	public WebElement getbackToAddCandidate() {
+		return driver.findElement(backToAddCandidate);
 	}
 
 	public WebElement getUsername() {
@@ -170,8 +176,8 @@ public class RecruitmentPage extends base {
 		return driver.findElement(addCandidate_consentToKeepData);
 	}
 
-	public WebElement getBtnSave() {
-		return driver.findElement(btnSave);
+	public WebElement saveCandidateBtn() {
+		return driver.findElement(saveCandidateBtn);
 	}
 
 	public void LoginProcess() throws InterruptedException {
