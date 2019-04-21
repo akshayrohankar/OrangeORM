@@ -33,6 +33,20 @@ public class RecruitmentPage extends base {
 	By password = By.id("txtPassword");
 	By loginbtn = By.id("btnLogin");
 
+	
+	By addCandidate = By.id("btnAdd");
+	By deleteCandidate = By.id("btnDelete");
+	By addCandidate_firstName = By.id("addCandidate_firstName");
+	By addCandidate_middleName = By.id("addCandidate_middleName");
+	By addCandidate_lastName = By.id("addCandidate_lastName");
+	By addCandidate_email = By.id("addCandidate_email");
+	By addCandidate_contactNo = By.id("addCandidate_contactNo");
+	By addCandidate_vacancy = By.id("addCandidate_vacancy");
+	By addCandidate_keyWords = By.id("addCandidate_keyWords");
+	By addCandidate_comment = By.id("addCandidate_comment");
+	By addCandidate_appliedDate = By.id("addCandidate_appliedDate");
+	By addCandidate_consentToKeepData = By.id("addCandidate_consentToKeepData");
+	By btnSave = By.id("btnSave");
 
 	public WebElement getUsername() {
 		return driver.findElement(username);
@@ -99,6 +113,59 @@ public class RecruitmentPage extends base {
 
 	public WebElement getDeleteBtn() {
 		return driver.findElement(deleteBtn);
+	}
+
+
+	public WebElement getAddCandidate() {
+		return driver.findElement(addCandidate);
+	}
+
+	public WebElement getDeleteCandidate() {
+		return driver.findElement(deleteCandidate);
+	}
+
+	public WebElement getAddCandidate_firstName() {
+		return driver.findElement(addCandidate_firstName);
+	}
+
+	public WebElement getAddCandidate_middleName() {
+		return driver.findElement(addCandidate_middleName);
+	}
+
+	public WebElement getAddCandidate_lastName() {
+		return driver.findElement(addCandidate_lastName);
+	}
+
+	public WebElement getAddCandidate_email() {
+		return driver.findElement(addCandidate_email);
+	}
+
+	public WebElement getAddCandidate_contactNo() {
+		return driver.findElement(addCandidate_contactNo);
+	}
+
+	public WebElement getAddCandidate_vacancy() {
+		return driver.findElement(addCandidate_vacancy);
+	}
+
+	public WebElement getAddCandidate_keyWords() {
+		return driver.findElement(addCandidate_keyWords);
+	}
+
+	public WebElement getAddCandidate_comment() {
+		return driver.findElement(addCandidate_comment);
+	}
+
+	public WebElement getAddCandidate_appliedDate() {
+		return driver.findElement(addCandidate_appliedDate);
+	}
+
+	public WebElement getAddCandidate_consentToKeepData() {
+		return driver.findElement(addCandidate_consentToKeepData);
+	}
+
+	public WebElement getBtnSave() {
+		return driver.findElement(btnSave);
 	}
 
 	public void LoginProcess() throws InterruptedException {

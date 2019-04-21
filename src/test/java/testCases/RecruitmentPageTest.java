@@ -19,7 +19,7 @@ public class RecruitmentPageTest extends base {
 		initializeDriver();
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void searchCandidates() throws InterruptedException, IOException {
 		RecruitmentPage objREcruitmentPage = new RecruitmentPage(driver);
 		objREcruitmentPage.LoginProcess();
@@ -70,5 +70,46 @@ public class RecruitmentPageTest extends base {
 		
 
 		objRecruit.getSearchBtn().click();	
+	}
+	
+	
+	@Test
+	public void addCandidates() throws InterruptedException, IOException {
+		RecruitmentPage objREcruitmentPage = new RecruitmentPage(driver);
+		objREcruitmentPage.LoginProcess();
+
+		AdminPage objAdmin = new AdminPage(driver);
+		objAdmin.getRecruitmentTab().click();
+
+		RecruitmentPage objRecruit = new RecruitmentPage(driver);
+
+		Xls_Reader reader = new Xls_Reader("E:\\Udemy_Selenium\\testData.xlsx");
+
+		int countRow = reader.getRowCount("CandidateData");
+		objRecruit.getAddBtn().click();
+
+		
+		objRecruit.getAddCandidate_firstName().clear();
+		objRecruit.getAddCandidate_firstName().sendKeys(reader.getCellData("CandidateData", "First Name", 2));
+		objRecruit.getAddCandidate_middleName().clear();
+		objRecruit.getAddCandidate_middleName().sendKeys(reader.getCellData("CandidateData", "Middle Name", 2));
+		objRecruit.getAddCandidate_lastName().clear();
+		objRecruit.getAddCandidate_lastName().sendKeys(reader.getCellData("CandidateData", "Last Name", 2));
+		objRecruit.getAddCandidate_email().clear();
+		objRecruit.getAddCandidate_email().sendKeys(reader.getCellData("CandidateData", "Email", 2));
+		objRecruit.getAddCandidate_vacancy().click();
+		Select sel = new Select(objRecruit.getAddCandidate_vacancy());
+		sel.selectByVisibleText(reader.getCellData("CandidateData", "Job Vacancy", 2));
+		objRecruit.getAddCandidate_keyWords().clear();
+		objRecruit.getAddCandidate_keyWords().sendKeys(reader.getCellData("CandidateData", "Keywords", 2));
+		objRecruit.getAddCandidate_comment().clear();
+		objRecruit.getAddCandidate_comment().sendKeys(reader.getCellData("CandidateData", "Comment", 2));
+		objRecruit.getAddCandidate_appliedDate().click();
+		objRecruit.getAddCandidate_appliedDate().sendKeys(reader.getCellData("CandidateData", "Date of Application", 2));
+		objRecruit.getAddCandidate_consentToKeepData().click();
+		objRecruit.getBtnSave().click();
+			
+			
+
 	}
 }
