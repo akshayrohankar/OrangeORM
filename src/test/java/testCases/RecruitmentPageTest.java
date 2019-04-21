@@ -105,7 +105,7 @@ public class RecruitmentPageTest extends base {
 		objRecruit.getAddCandidate_comment().clear();
 		objRecruit.getAddCandidate_comment().sendKeys(reader.getCellData("CandidateData", "Comment", 2));
 		objRecruit.getAddCandidate_appliedDate().click();
-		objRecruit.getAddCandidate_appliedDate().sendKeys(reader.getCellData("CandidateData", "Date of Application", 2));
+		objRecruit.getselectDate().click();
 		objRecruit.getAddCandidate_consentToKeepData().click();
 		objRecruit.getBtnSave().click();
 			

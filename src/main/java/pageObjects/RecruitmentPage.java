@@ -47,6 +47,12 @@ public class RecruitmentPage extends base {
 	By addCandidate_appliedDate = By.id("addCandidate_appliedDate");
 	By addCandidate_consentToKeepData = By.id("addCandidate_consentToKeepData");
 	By btnSave = By.id("btnSave");
+	
+	By selectDate = By.xpath("//tr[1]//td[1]//a[1]");
+	
+	public WebElement getselectDate() {
+		return driver.findElement(selectDate);
+	}
 
 	public WebElement getUsername() {
 		return driver.findElement(username);
