@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="68680" started-at="2019-04-21T09:49:25Z" finished-at="2019-04-21T09:50:34Z">
+    <suite name="Default suite" duration-ms="18326" started-at="2019-05-18T14:56:26Z"
+           finished-at="2019-05-18T14:56:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="68680" started-at="2019-04-21T09:49:25Z" finished-at="2019-04-21T09:50:34Z">
+        <test name="Default test" duration-ms="18326" started-at="2019-05-18T14:56:26Z"
+              finished-at="2019-05-18T14:56:44Z">
       <class name="testCases.RecruitmentPageTest">
-        <test-method status="PASS" signature="initMe()[pri:0, instance:testCases.RecruitmentPageTest@1bce4f0a]" name="initMe" is-config="true" duration-ms="14145" started-at="2019-04-21T09:49:25Z" finished-at="2019-04-21T09:49:40Z">
+          <test-method status="PASS" signature="initMe()[pri:0, instance:testCases.RecruitmentPageTest@604ed9f0]"
+                       name="initMe" is-config="true" duration-ms="18317" started-at="2019-05-18T14:56:26Z"
+                       finished-at="2019-05-18T14:56:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMe -->
-        <test-method status="PASS" signature="addCandidates()[pri:0, instance:testCases.RecruitmentPageTest@1bce4f0a]" name="addCandidates" duration-ms="54507" started-at="2019-04-21T09:49:40Z" finished-at="2019-04-21T09:50:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addCandidates -->
       </class> <!-- testCases.RecruitmentPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
