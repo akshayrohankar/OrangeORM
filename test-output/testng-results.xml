@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="47425" started-at="2019-08-07T19:38:08Z" finished-at="2019-08-07T19:38:56Z">
+  <suite name="Default suite" duration-ms="71011" started-at="2019-08-07T20:25:42Z" finished-at="2019-08-07T20:26:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="47425" started-at="2019-08-07T19:38:08Z" finished-at="2019-08-07T19:38:56Z">
-      <class name="testCases.LoginPageTest">
-        <test-method status="PASS" signature="initMe()[pri:0, instance:testCases.LoginPageTest@1bce4f0a]" name="initMe" is-config="true" duration-ms="24329" started-at="2019-08-07T19:38:08Z" finished-at="2019-08-07T19:38:33Z">
+    <test name="Default test" duration-ms="71011" started-at="2019-08-07T20:25:42Z" finished-at="2019-08-07T20:26:53Z">
+      <class name="testCases.RecruitmentPageTest">
+        <test-method status="PASS" signature="initMe()[pri:0, instance:testCases.RecruitmentPageTest@1bce4f0a]" name="initMe" is-config="true" duration-ms="13599" started-at="2019-08-07T20:25:42Z" finished-at="2019-08-07T20:25:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMe -->
-        <test-method status="PASS" signature="testValidateUnSuccessfullLogin()[pri:0, instance:testCases.LoginPageTest@1bce4f0a]" name="testValidateUnSuccessfullLogin" duration-ms="22997" started-at="2019-08-07T19:38:33Z" finished-at="2019-08-07T19:38:56Z">
+        <test-method status="PASS" signature="addCandidates()[pri:0, instance:testCases.RecruitmentPageTest@1bce4f0a]" name="addCandidates" duration-ms="57342" started-at="2019-08-07T20:25:56Z" finished-at="2019-08-07T20:26:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testValidateUnSuccessfullLogin -->
-      </class> <!-- testCases.LoginPageTest -->
+        </test-method> <!-- addCandidates -->
+      </class> <!-- testCases.RecruitmentPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
