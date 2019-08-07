@@ -105,6 +105,7 @@ public class RecruitmentPageTest extends base {
 			objRecruit.getAddCandidate_consentToKeepData().click();
 			objRecruit.saveCandidateBtn().click();
 
+
 			objRecruit.getbackToAddCandidate().click();
 
 		}
