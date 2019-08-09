@@ -81,6 +81,8 @@ public class RecruitmentPageTest extends base {
 		Xls_Reader reader = new Xls_Reader("E:\\Udemy_Selenium\\testData.xlsx");
 
 		int countRow = reader.getRowCount("CandidateData");
+		
+		Select sel = new Select(objRecruit.getAddCandidate_vacancy());
 
 		for (int i = 2; i < countRow; i++) {
 
@@ -94,8 +96,9 @@ public class RecruitmentPageTest extends base {
 			objRecruit.getAddCandidate_email().clear();
 			objRecruit.getAddCandidate_email().sendKeys(reader.getCellData("CandidateData", "Email", i));
 			objRecruit.getAddCandidate_vacancy().click();
-			Select sel = new Select(objRecruit.getAddCandidate_vacancy());
+			
 			sel.selectByVisibleText(reader.getCellData("CandidateData", "Job Vacancy", i));
+			
 			objRecruit.getAddCandidate_keyWords().clear();
 			objRecruit.getAddCandidate_keyWords().sendKeys(reader.getCellData("CandidateData", "Keywords", i));
 			objRecruit.getAddCandidate_comment().clear();
