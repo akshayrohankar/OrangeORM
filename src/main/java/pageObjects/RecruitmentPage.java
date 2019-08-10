@@ -188,7 +188,7 @@ public class RecruitmentPage extends base {
 		getUsername().sendKeys(prop.getProperty("username"));
 		getPassword().sendKeys(prop.getProperty("password"));
 		getLoginbtn().click();
-		Thread.sleep(10000);
+		Thread.sleep(3000);
 
 	}
 

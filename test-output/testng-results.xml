@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="71011" started-at="2019-08-07T20:25:42Z" finished-at="2019-08-07T20:26:53Z">
+  <suite name="Default suite" duration-ms="56806" started-at="2019-08-10T19:05:22Z" finished-at="2019-08-10T19:06:19Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="71011" started-at="2019-08-07T20:25:42Z" finished-at="2019-08-07T20:26:53Z">
-      <class name="testCases.RecruitmentPageTest">
-        <test-method status="PASS" signature="initMe()[pri:0, instance:testCases.RecruitmentPageTest@1bce4f0a]" name="initMe" is-config="true" duration-ms="13599" started-at="2019-08-07T20:25:42Z" finished-at="2019-08-07T20:25:56Z">
+    <test name="Default test" duration-ms="56806" started-at="2019-08-10T19:05:22Z" finished-at="2019-08-10T19:06:19Z">
+      <class name="testCases.AddCandidates_E2E_Test">
+        <test-method status="PASS" signature="initMe()[pri:0, instance:testCases.AddCandidates_E2E_Test@1bce4f0a]" name="initMe" is-config="true" duration-ms="17603" started-at="2019-08-10T19:05:22Z" finished-at="2019-08-10T19:05:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMe -->
-        <test-method status="PASS" signature="addCandidates()[pri:0, instance:testCases.RecruitmentPageTest@1bce4f0a]" name="addCandidates" duration-ms="57342" started-at="2019-08-07T20:25:56Z" finished-at="2019-08-07T20:26:53Z">
+        <test-method status="PASS" signature="AddVacancyTest()[pri:1, instance:testCases.AddCandidates_E2E_Test@1bce4f0a]" name="AddVacancyTest" duration-ms="5496" started-at="2019-08-10T19:05:40Z" finished-at="2019-08-10T19:05:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddVacancyTest -->
+        <test-method status="PASS" signature="addCandidates()[pri:2, instance:testCases.AddCandidates_E2E_Test@1bce4f0a]" name="addCandidates" duration-ms="33666" started-at="2019-08-10T19:05:45Z" finished-at="2019-08-10T19:06:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCandidates -->
-      </class> <!-- testCases.RecruitmentPageTest -->
+      </class> <!-- testCases.AddCandidates_E2E_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

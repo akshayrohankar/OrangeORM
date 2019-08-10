@@ -2,76 +2,53 @@ package testCases;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pageObjects.AdminPage;
 import pageObjects.RecruitmentPage;
+import pageObjects.RecruitmentPage_Vacancy;
 import resources.Xls_Reader;
 import resources.base;
 
-public class RecruitmentPageTest extends base {
+public class AddCandidates_E2E_Test extends base {
 
 	@BeforeTest
-	public void initMe() throws IOException {
-
+	public void initMe() throws IOException, InterruptedException {
 		initializeDriver();
-	}
-
-	@Test(enabled = false)
-	public void searchCandidates() throws InterruptedException, IOException {
 		RecruitmentPage objREcruitmentPage = new RecruitmentPage(driver);
 		objREcruitmentPage.LoginProcess();
-
 		AdminPage objAdmin = new AdminPage(driver);
 		objAdmin.getRecruitmentTab().click();
-
-		RecruitmentPage objRecruit = new RecruitmentPage(driver);
-
-		Xls_Reader reader = new Xls_Reader("E:\\Udemy_Selenium\\testData.xlsx");
-
-		int count = reader.getRowCount("testdata");
-
-		objRecruit.getJobTitle().click();
-		Select sel = new Select(objRecruit.getJobTitle());
-		sel.selectByVisibleText(reader.getCellData("testdata", "Job Title", 2));
-
-		objRecruit.getVacancy().click();
-		Select sel1 = new Select(objRecruit.getVacancy());
-		sel1.selectByVisibleText(reader.getCellData("testdata", "Vacancy", 2));
-
-		objRecruit.getHiringManager().click();
-		Select sel2 = new Select(objRecruit.getHiringManager());
-		sel2.selectByVisibleText(reader.getCellData("testdata", "Hiring Manager", 2));
-
-		objRecruit.getStatus().click();
-		Select sel3 = new Select(objRecruit.getStatus());
-		sel3.selectByVisibleText(reader.getCellData("testdata", "Status", 2));
-
-		objRecruit.getCandidateName().clear();
-		objRecruit.getCandidateName().sendKeys(reader.getCellData("testdata", "Candidate Name", 2));
-
-		objRecruit.getKeywords().clear();
-		objRecruit.getKeywords().sendKeys(reader.getCellData("testdata", "Keywords", 2));
-
-		objRecruit.getFromDate().clear();
-		objRecruit.getFromDate().sendKeys(reader.getCellData("testdata", "Date of Application", 2));
-
-		objRecruit.getToDate().clear();
-		objRecruit.getToDate().sendKeys(reader.getCellData("testdata", "To", 2));
-
-		objRecruit.getMethodAppl().click();
-		Select sel4 = new Select(objRecruit.getMethodAppl());
-		sel4.selectByVisibleText(reader.getCellData("testdata", "Method of Application", 2));
-
-		objRecruit.getSearchBtn().click();
 	}
 
-	@Test
-	public void addCandidates() throws InterruptedException, IOException {
+	@Test(priority = 1)
+	public void AddVacancyTest() throws InterruptedException {
+
 		RecruitmentPage objREcruitmentPage = new RecruitmentPage(driver);
-		objREcruitmentPage.LoginProcess();
+		objREcruitmentPage.getVacancyTab().click();
+		
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+
+		RecruitmentPage_Vacancy objVacancy = new RecruitmentPage_Vacancy();
+		objVacancy.ClickAddVacancyBtn();
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//select[@id='addJobVacancy_jobTitle']")));
+		objVacancy.SelectJobTitle();
+		objVacancy.AddVacancyName();
+		objVacancy.SelectHiringManager();
+		objVacancy.ClickOnSaveVacancyBtn();
+		Thread.sleep(2000);
+		objVacancy.getRecrTab();
+
+	}
+
+	@Test(priority = 2)
+	public void addCandidates() throws InterruptedException, IOException {
 
 		AdminPage objAdmin = new AdminPage(driver);
 		objAdmin.getRecruitmentTab().click();
@@ -96,7 +73,6 @@ public class RecruitmentPageTest extends base {
 			objRecruit.getAddCandidate_vacancy().click();
 			Select sel = new Select(objRecruit.getAddCandidate_vacancy());
 			sel.selectByVisibleText(reader.getCellData("CandidateData", "Job Vacancy", i));
-			
 			objRecruit.getAddCandidate_keyWords().clear();
 			objRecruit.getAddCandidate_keyWords().sendKeys(reader.getCellData("CandidateData", "Keywords", i));
 			objRecruit.getAddCandidate_comment().clear();
@@ -105,10 +81,7 @@ public class RecruitmentPageTest extends base {
 			objRecruit.getselectDate().click();
 			objRecruit.getAddCandidate_consentToKeepData().click();
 			objRecruit.saveCandidateBtn().click();
-
-
 			objRecruit.getbackToAddCandidate().click();
-
 		}
 	}
 }
