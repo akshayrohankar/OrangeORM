@@ -21,7 +21,7 @@ public WebDriver initializeDriver() throws IOException
 {
 	
  prop= new Properties();
-FileInputStream fis=new FileInputStream("E:\\Udemy_Selenium\\OrangeORM\\src\\main\\java\\resources\\data.properties");
+FileInputStream fis=new FileInputStream("E:\\Eclipse Workspace\\Udemy_Selenium\\Orange HRM\\src\\main\\java\\resources\\data.properties");
 
 prop.load(fis);
 String browserName=prop.getProperty("browser");
@@ -29,7 +29,7 @@ System.out.println(browserName);
 
 if(browserName.equals("chrome"))
 {
-	 System.setProperty("webdriver.chrome.driver", "E:\\Udemy_Selenium\\chromedriver.exe");
+	 System.setProperty("webdriver.chrome.driver", "E:\\Eclipse Workspace\\Udemy_Selenium\\Orange HRM\\src\\main\\java\\resources\\chromedriver.exe");
 	driver= new ChromeDriver();
 		//execute in chrome driver
 	

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="68680" started-at="2019-04-21T09:49:25Z" finished-at="2019-04-21T09:50:34Z">
+  <suite name="Default suite" duration-ms="36127" started-at="2019-10-12T06:46:03Z" finished-at="2019-10-12T06:46:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="68680" started-at="2019-04-21T09:49:25Z" finished-at="2019-04-21T09:50:34Z">
-      <class name="testCases.RecruitmentPageTest">
-        <test-method status="PASS" signature="initMe()[pri:0, instance:testCases.RecruitmentPageTest@1bce4f0a]" name="initMe" is-config="true" duration-ms="14145" started-at="2019-04-21T09:49:25Z" finished-at="2019-04-21T09:49:40Z">
+    <test name="Default test" duration-ms="36127" started-at="2019-10-12T06:46:03Z" finished-at="2019-10-12T06:46:39Z">
+      <class name="testCases.LoginPageTest">
+        <test-method status="PASS" signature="initMe()[pri:0, instance:testCases.LoginPageTest@59f99ea]" name="initMe" is-config="true" duration-ms="13476" started-at="2019-10-12T06:46:03Z" finished-at="2019-10-12T06:46:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMe -->
-        <test-method status="PASS" signature="addCandidates()[pri:0, instance:testCases.RecruitmentPageTest@1bce4f0a]" name="addCandidates" duration-ms="54507" started-at="2019-04-21T09:49:40Z" finished-at="2019-04-21T09:50:34Z">
+        <test-method status="PASS" signature="testValidateUnSuccessfullLogin()[pri:0, instance:testCases.LoginPageTest@59f99ea]" name="testValidateUnSuccessfullLogin" duration-ms="22631" started-at="2019-10-12T06:46:16Z" finished-at="2019-10-12T06:46:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addCandidates -->
-      </class> <!-- testCases.RecruitmentPageTest -->
+        </test-method> <!-- testValidateUnSuccessfullLogin -->
+      </class> <!-- testCases.LoginPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
