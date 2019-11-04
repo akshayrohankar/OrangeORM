@@ -96,6 +96,7 @@ public class RecruitmentPageTest extends base {
 			objRecruit.getAddCandidate_vacancy().click();
 			Select sel = new Select(objRecruit.getAddCandidate_vacancy());
 			sel.selectByVisibleText(reader.getCellData("CandidateData", "Job Vacancy", i));
+			
 			objRecruit.getAddCandidate_keyWords().clear();
 			objRecruit.getAddCandidate_keyWords().sendKeys(reader.getCellData("CandidateData", "Keywords", i));
 			objRecruit.getAddCandidate_comment().clear();
@@ -104,6 +105,7 @@ public class RecruitmentPageTest extends base {
 			objRecruit.getselectDate().click();
 			objRecruit.getAddCandidate_consentToKeepData().click();
 			objRecruit.saveCandidateBtn().click();
+
 
 			objRecruit.getbackToAddCandidate().click();
 

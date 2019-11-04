@@ -1,17 +1,17 @@
 package resources;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 public class base {
 
@@ -21,7 +21,7 @@ public WebDriver initializeDriver() throws IOException
 {
 	
  prop= new Properties();
-FileInputStream fis=new FileInputStream("E:\\Eclipse Workspace\\Udemy_Selenium\\Orange HRM\\src\\main\\java\\resources\\data.properties");
+FileInputStream fis=new FileInputStream("E:\\Udemy_Selenium\\OrangeORM\\src\\main\\java\\resources\\data.properties");
 
 prop.load(fis);
 String browserName=prop.getProperty("browser");
@@ -29,10 +29,11 @@ System.out.println(browserName);
 
 if(browserName.equals("chrome"))
 {
-	 System.setProperty("webdriver.chrome.driver", "E:\\Eclipse Workspace\\Udemy_Selenium\\Orange HRM\\src\\main\\java\\resources\\chromedriver.exe");
+	 System.setProperty("webdriver.chrome.driver", "E:\\Udemy_Selenium\\chromedriver.exe");
 	driver= new ChromeDriver();
 		//execute in chrome driver
-	
+
+
 }
 else if (browserName.equals("firefox"))
 {
@@ -47,7 +48,7 @@ else if (browserName.equals("IE"))
 driver.get(prop.getProperty("url"));
 driver.manage().window().maximize();
 
-driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 return driver;
 
 
