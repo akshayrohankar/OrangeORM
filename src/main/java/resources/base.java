@@ -21,7 +21,7 @@ public WebDriver initializeDriver() throws IOException
 {
 	
  prop= new Properties();
-FileInputStream fis=new FileInputStream("E:\\Udemy_Selenium\\OrangeORM\\src\\main\\java\\resources\\data.properties");
+FileInputStream fis=new FileInputStream("E:\\Eclipse Workspace\\OrangeORM\\src\\main\\java\\resources\\data.properties");
 
 prop.load(fis);
 String browserName=prop.getProperty("browser");
@@ -29,7 +29,7 @@ System.out.println(browserName);
 
 if(browserName.equals("chrome"))
 {
-	 System.setProperty("webdriver.chrome.driver", "E:\\Udemy_Selenium\\chromedriver.exe");
+	 System.setProperty("webdriver.chrome.driver", "E:\\Eclipse Workspace\\chromedriver.exe");
 	driver= new ChromeDriver();
 		//execute in chrome driver
 
@@ -57,7 +57,7 @@ return driver;
 public void getScreenshot(String result) throws IOException
 {
 	File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-	FileUtils.copyFile(src, new File("E:\\Udemy_Selenium\\OrangeORM\\Screenshots"+result+"screenshot.png"));
+	FileUtils.copyFile(src, new File("E:\\Eclipse Workspace\\OrangeORM\\Screenshots"+result+"screenshot.png"));
 	
 }
 
