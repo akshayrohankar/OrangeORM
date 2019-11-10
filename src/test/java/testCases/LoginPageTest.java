@@ -39,7 +39,6 @@ public class LoginPageTest extends base {
 		LoginPage objLoginPage = new LoginPage(driver);
 		objLoginPage.LoginProcess();
 		objLoginPage.ValidateUnSuccessfullLogin();
-		
 	}
 
 }
