@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 import resources.base;
 
@@ -48,9 +49,9 @@ public class RecruitmentPage extends base {
 	By addCandidate_consentToKeepData = By.id("addCandidate_consentToKeepData");
 	By saveCandidateBtn = By.id("btnSave");
 	By backToAddCandidate = By.id("btnBack");
+	By getVacancyTab = By.xpath("//a[@id='menu_recruitment_viewJobVacancy']");
 	
-	
-	By selectDate = By.xpath("//tr[1]//td[1]//a[1]");
+	By selectDate = By.xpath("//tr[2]//td[1]//a[1]");
 	
 	public WebElement getselectDate() {
 		return driver.findElement(selectDate);
@@ -72,8 +73,10 @@ public class RecruitmentPage extends base {
 		return driver.findElement(loginbtn);
 	}
 	
-	
-	
+	public WebElement getVacancyTab() {
+		return driver.findElement(getVacancyTab);
+	}
+
 
 	public WebElement getJobTitle() {
 		return driver.findElement(jobTitle);
@@ -185,7 +188,7 @@ public class RecruitmentPage extends base {
 		getUsername().sendKeys(prop.getProperty("username"));
 		getPassword().sendKeys(prop.getProperty("password"));
 		getLoginbtn().click();
-		Thread.sleep(10000);
+		Thread.sleep(3000);
 
 	}
 
