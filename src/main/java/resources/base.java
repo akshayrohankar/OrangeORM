@@ -29,7 +29,7 @@ System.out.println(browserName);
 
 if(browserName.equals("chrome"))
 {
-	 System.setProperty("webdriver.chrome.driver", "E:\\Eclipse Workspace\\Udemy_Selenium\\Orange HRM\\src\\main\\java\\resources\\chromedriver.exe");
+	 System.setProperty("webdriver.chrome.driver", "E:\\Eclipse Workspace\\chromedriver.exe");
 	driver= new ChromeDriver();
 		//execute in chrome driver
 	

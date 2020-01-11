@@ -19,7 +19,7 @@ public class RecruitmentPageTest extends base {
 		initializeDriver();
 	}
 
-	@Test(enabled = false)
+	@Test(enabled=true)
 	public void searchCandidates() throws InterruptedException, IOException {
 		RecruitmentPage objREcruitmentPage = new RecruitmentPage(driver);
 		objREcruitmentPage.LoginProcess();
@@ -68,7 +68,7 @@ public class RecruitmentPageTest extends base {
 		objRecruit.getSearchBtn().click();
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void addCandidates() throws InterruptedException, IOException {
 		RecruitmentPage objREcruitmentPage = new RecruitmentPage(driver);
 		objREcruitmentPage.LoginProcess();

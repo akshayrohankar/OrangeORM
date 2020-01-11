@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -42,7 +43,7 @@ public class WindowHandlerTest extends base {
 		maintenanceTab.click();
 		leaveTab.click();
 		pimTab.click();
-		
+
 		action.keyUp(Keys.CONTROL).build().perform();
 
 		Set<String> s1 = driver.getWindowHandles();
@@ -55,6 +56,12 @@ public class WindowHandlerTest extends base {
 			System.out.println(driver.getTitle());
 		}
 		driver.switchTo().window(mainWindow);
+	}
+
+	@AfterTest
+	public void closeMe() throws IOException {
+
+		driver.quit();
 	}
 
 }
