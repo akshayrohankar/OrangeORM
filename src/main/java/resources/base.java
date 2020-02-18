@@ -45,7 +45,7 @@ else if (browserName.equals("IE"))
 //	IE code
 }
 
-driver.get(prop.getProperty("url"));
+driver.get(prop.getProperty("temp_url"));
 driver.manage().window().maximize();
 
 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

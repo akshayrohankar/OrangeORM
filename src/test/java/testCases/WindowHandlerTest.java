@@ -23,14 +23,14 @@ public class WindowHandlerTest extends base {
 		initializeDriver();
 	}
 
-	@Test(priority = 0)
+	@Test(priority = 1)
 	public void testLoginPage() throws InterruptedException {
 		LoginPage objLoginPage = new LoginPage(driver);
 		objLoginPage.LoginProcess();
 
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void HandlerLoginPage() throws InterruptedException {
 		WebElement directoryTab = driver.findElement(By.xpath("//b[contains(text(),'Directory')]"));
 		WebElement maintenanceTab = driver.findElement(By.xpath("//b[contains(text(),'Maintenance')]"));
