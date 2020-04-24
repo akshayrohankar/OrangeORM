@@ -21,7 +21,7 @@ public WebDriver initializeDriver() throws IOException
 {
 	
  prop= new Properties();
-FileInputStream fis=new FileInputStream("E:\\Eclipse Workspace\\OrangeORM\\src\\main\\java\\resources\\data.properties");
+FileInputStream fis=new FileInputStream("E:\\Eclipse Workspace\\Orange HRM\\src\\main\\java\\resources\\data.properties");
 
 prop.load(fis);
 String browserName=prop.getProperty("browser");
@@ -45,7 +45,7 @@ else if (browserName.equals("IE"))
 //	IE code
 }
 
-driver.get(prop.getProperty("temp_url"));
+driver.get(prop.getProperty("url"));
 driver.manage().window().maximize();
 
 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

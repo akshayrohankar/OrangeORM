@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.List;
 
-public class GoogleSearchText extends base{
+public class GoogleSearchText extends Base_Test{
 
     @BeforeTest
     public void initMe() throws IOException {

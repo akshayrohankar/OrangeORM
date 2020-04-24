@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
 
-public class WindowHandling extends base {
+public class WindowHandling extends Base_Test {
 
     @BeforeTest
     public void initMe() throws IOException {

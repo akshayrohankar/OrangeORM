@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class DragAndDropConcept extends base {
+public class DragAndDropConcept extends Base_Test {
 
     @BeforeTest
     public void initMe() throws IOException {

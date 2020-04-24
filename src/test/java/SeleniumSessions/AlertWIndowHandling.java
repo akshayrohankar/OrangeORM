@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.util.List;
 
-public class AlertWIndowHandling extends base{
+public class AlertWIndowHandling extends Base_Test{
 
     @BeforeTest
     public void initMe() throws IOException {

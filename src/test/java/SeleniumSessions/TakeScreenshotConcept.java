@@ -13,7 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-    public class TakeScreenshotConcept extends base{
+    public class TakeScreenshotConcept extends Base_Test{
 
         @BeforeTest
         public void initMe() throws IOException {
