@@ -31,11 +31,11 @@ public class TestingPractice extends base {
 		WebElement dropdownButton = driver.findElement(By.xpath("//select[@id='continents']"));
 
 		Select sel = new Select(dropdownButton);
-		
-		//dropdownButton.click();
+
+		// dropdownButton.click();
 		int count = sel.getOptions().size();
-	System.out.println(count);
-		
+		System.out.println(count);
+
 	}
 
 	@AfterTest

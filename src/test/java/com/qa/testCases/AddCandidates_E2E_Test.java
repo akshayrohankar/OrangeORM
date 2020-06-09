@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.qa.pageObjects.AdminPage;
+import com.qa.pageObjects.LoginPage;
 import com.qa.pageObjects.RecruitmentPage;
 import com.qa.pageObjects.RecruitmentPage_Vacancy;
 import com.qa.resources.base;
@@ -19,8 +20,8 @@ public class AddCandidates_E2E_Test extends base {
 	@BeforeTest
 	public void initMe() throws IOException, InterruptedException {
 		initializeDriver();
-		RecruitmentPage objREcruitmentPage = new RecruitmentPage();
-		objREcruitmentPage.LoginProcess();
+		LoginPage loginPage = new LoginPage();
+		loginPage.LoginProcess();
 		AdminPage objAdmin = new AdminPage();
 		objAdmin.RecruitmentTab.click();
 	}

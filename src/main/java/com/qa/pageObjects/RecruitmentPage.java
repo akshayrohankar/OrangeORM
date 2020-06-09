@@ -1,4 +1,5 @@
 package com.qa.pageObjects;
+
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -48,7 +49,6 @@ public class RecruitmentPage extends base {
 	@FindBy(id = "btnLogin")
 	public WebElement loginbtn;
 
-	
 	@FindBy(id = "btnAdd")
 	public WebElement addCandidate;
 	@FindBy(id = "btnDelete")
@@ -84,31 +84,6 @@ public class RecruitmentPage extends base {
 	@FindBy(xpath = "//span[@id='spanMessage']")
 	public WebElement invalidLoginMsg;
 
-	public void LoginProcess() throws InterruptedException {
-		username.sendKeys(prop.getProperty("username"));
-		password.sendKeys(prop.getProperty("password"));
-		loginbtn.click();
-		Thread.sleep(3000);
-	}
-
-	public String ValidateSuccessfullLogin() {
-		String actualPageTitle = driver.getTitle();
-		System.out.println(actualPageTitle);
-		return actualPageTitle;
-	}
-
-	public void ValidateUnSuccessfullLogin() {
-		try {
-			if (!invalidLoginMsg.isDisplayed()) {
-				System.out.println("Valid credentials");
-			} else {
-				System.out.println("Invalid Login");
-			}
-		} catch (NoSuchElementException el) {
-			System.out.println("Caught Exception Valid Credentials");
-		}
-	}
-
 	public void addCandidates() {
 		Xls_Reader reader = new Xls_Reader(".\\src\\main\\java\\com\\qa\\resources\\testData.xlsx");
 		int countRow = reader.getRowCount("CandidateData");
@@ -138,9 +113,9 @@ public class RecruitmentPage extends base {
 	}
 
 	public void searchCandidates() {
-		
+
 		Xls_Reader reader = new Xls_Reader(".\\src\\main\\java\\com\\qa\\resources\\testData.xlsx");
-		//int count = reader.getRowCount("testdata");
+		// int count = reader.getRowCount("testdata");
 		jobTitle.click();
 		Select sel = new Select(jobTitle);
 		sel.selectByVisibleText(reader.getCellData("testdata", "Job Title", 2));
