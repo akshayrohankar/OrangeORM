@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import com.qa.pageObjects.AdminPage;
 import com.qa.pageObjects.LoginPage;
 import com.qa.pageObjects.RecruitmentPage;
@@ -18,7 +17,7 @@ public class RecruitmentPageTest extends base {
 		initializeDriver();
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void searchCandidates() throws InterruptedException, IOException {
 		LoginPage loginPage = new LoginPage();
 		loginPage.LoginProcess();
@@ -28,7 +27,7 @@ public class RecruitmentPageTest extends base {
 		objRecruit.searchCandidates();
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void addCandidates() throws InterruptedException, IOException {
 		LoginPage loginPage = new LoginPage();
 		loginPage.LoginProcess();

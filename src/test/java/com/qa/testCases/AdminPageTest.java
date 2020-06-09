@@ -21,13 +21,14 @@ public class AdminPageTest extends base {
 	@Test
 	public void testAddUserAdminPage() throws InterruptedException {
 		AdminPage objAdminPage = new AdminPage();
-		objAdminPage.addUser();	
+		objAdminPage.addUser();
+		Thread.sleep(5000);
 	}
-	
+
 	@AfterTest
-	public void closeMe() throws IOException, InterruptedException {
-		Thread.sleep(10000);
-		driver.close();
+	public void tearDown() {
+
+		driver.quit();
 	}
 
 }

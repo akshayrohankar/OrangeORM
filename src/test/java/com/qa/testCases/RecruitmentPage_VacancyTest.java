@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -24,7 +25,7 @@ public class RecruitmentPage_VacancyTest extends base {
 		loginPage.LoginProcess();
 		AdminPage objAdmin = new AdminPage();
 		objAdmin.RecruitmentTab.click();
-		objREcruitmentPage.vacancy.click();
+		objREcruitmentPage.getVacancyTab.click();
 	}
 
 	@Test(enabled = true)
@@ -41,5 +42,10 @@ public class RecruitmentPage_VacancyTest extends base {
 		objVacancy.SelectHiringManager();
 		objVacancy.ClickOnSaveVacancyBtn();
 
+	}
+	
+	@AfterTest
+	public void tearDown() {
+		driver.quit();
 	}
 }

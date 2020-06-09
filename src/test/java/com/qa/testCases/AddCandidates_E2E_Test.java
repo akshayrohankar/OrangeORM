@@ -31,9 +31,7 @@ public class AddCandidates_E2E_Test extends base {
 
 		RecruitmentPage objREcruitmentPage = new RecruitmentPage();
 		objREcruitmentPage.vacancy.click();
-		
 		WebDriverWait wait = new WebDriverWait(driver, 20);
-
 		RecruitmentPage_Vacancy objVacancy = new RecruitmentPage_Vacancy();
 		objVacancy.ClickAddVacancyBtn();
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//select[@id='addJobVacancy_jobTitle']")));
@@ -43,7 +41,6 @@ public class AddCandidates_E2E_Test extends base {
 		objVacancy.ClickOnSaveVacancyBtn();
 		Thread.sleep(2000);
 		objVacancy.getRecrTab();
-
 	}
 
 	@Test(priority = 2)
@@ -53,7 +50,7 @@ public class AddCandidates_E2E_Test extends base {
 		RecruitmentPage objRecruit = new RecruitmentPage();
 		objRecruit.addCandidates();
 	}
-	
+
 	@AfterTest
 	public void tearDown() throws IOException, InterruptedException {
 		driver.quit();
