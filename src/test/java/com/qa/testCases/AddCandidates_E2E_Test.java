@@ -30,7 +30,7 @@ public class AddCandidates_E2E_Test extends base {
 	public void AddVacancyTest() throws InterruptedException {
 
 		RecruitmentPage objREcruitmentPage = new RecruitmentPage();
-		objREcruitmentPage.vacancy.click();
+		objREcruitmentPage.getVacancyTab.click();
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		RecruitmentPage_Vacancy objVacancy = new RecruitmentPage_Vacancy();
 		objVacancy.ClickAddVacancyBtn();
