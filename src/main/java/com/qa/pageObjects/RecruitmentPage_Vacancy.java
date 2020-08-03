@@ -79,7 +79,7 @@ public class RecruitmentPage_Vacancy extends base {
 	public void SelectHiringManager() {
 
 		Vacancy_hiringManager.click();
-		Vacancy_hiringManager.sendKeys("a");
+		Vacancy_hiringManager.sendKeys("Linda Anderson");
 		Vacancy_hiringManager.sendKeys(Keys.ENTER);
 	}
 

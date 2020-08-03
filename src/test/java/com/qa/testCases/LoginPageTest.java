@@ -4,42 +4,36 @@ import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.qa.pageObjects.LoginPage;
 import com.qa.resources.base;
 
 public class LoginPageTest extends base {
+	static LoginPage objLoginPage;
 
-	@BeforeMethod
-	public void initMe() throws IOException {
+	@BeforeTest
+	public void initMe() throws IOException, InterruptedException {
 		initializeDriver();
-	}
-
-	@Test(enabled=true)
-	public void testLoginPage() throws InterruptedException {
-		LoginPage objLoginPage = new LoginPage();
+		objLoginPage = new LoginPage();
 		objLoginPage.LoginProcess();
 	}
+
 	
 	@Test(enabled=true)
 	public void testValidateSuccessfullLogin() throws InterruptedException {
-		LoginPage objLoginPage = new LoginPage();
-		objLoginPage.LoginProcess();
 		String actual = objLoginPage.ValidateSuccessfullLogin();
 		assertEquals(actual, prop.getProperty("titlePage"));
 	}
 
 	@Test(enabled=true)
 	public void testValidateUnSuccessfullLogin() throws InterruptedException {
-		LoginPage objLoginPage = new LoginPage();
-		objLoginPage.LoginProcess();
 		objLoginPage.ValidateUnSuccessfullLogin();
 	}
 	
-	@AfterMethod
+	@AfterTest
 	public void tearDown() throws IOException {
 		driver.quit();
 	}

@@ -46,7 +46,7 @@ public class AdminPage extends base {
 		int ranvalue = ran.nextInt(1000);
 		adminTab.click();
 		addBtn.click();
-		empName.sendKeys("a");
+		empName.sendKeys("Aaaa Bbb Ccc");
 		Thread.sleep(5000);
 		empName.sendKeys(Keys.ENTER);
 		String usrname = "Arnav" + ranvalue;

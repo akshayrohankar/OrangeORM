@@ -21,6 +21,7 @@ public class AdminPageTest extends base {
 	@Test
 	public void testAddUserAdminPage() throws InterruptedException {
 		AdminPage objAdminPage = new AdminPage();
+		
 		objAdminPage.addUser();
 		Thread.sleep(5000);
 	}
