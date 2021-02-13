@@ -3,7 +3,6 @@ package com.qa.pageObjects;
 import java.util.Iterator;
 import java.util.Set;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -30,19 +29,19 @@ public class LoginPage extends base {
 
 	@FindBy(xpath = "//span[@id='spanMessage']")
 	public WebElement invalidLoginMsg;
-	
+
 	@FindBy(xpath = "//b[contains(text(),'Directory')]")
 	public WebElement directoryTab;
-	
+
 	@FindBy(xpath = "//b[contains(text(),'Maintenance')]")
 	public WebElement maintenanceTab;
-	
+
 	@FindBy(xpath = "//b[contains(text(),'Leave')]")
 	public WebElement leaveTab;
-	
+
 	@FindBy(xpath = "//a[@id='menu_pim_viewPimModule']")
 	public WebElement pimTab;
-	
+
 	public void LoginProcess() throws InterruptedException {
 		username.sendKeys(prop.getProperty("username"));
 		password.sendKeys(prop.getProperty("password"));
@@ -68,7 +67,7 @@ public class LoginPage extends base {
 	}
 
 	public void VerifyWindowsHandlerFunctionality() {
-		
+
 		Actions action = new Actions(driver);
 		action.keyDown(Keys.CONTROL).build().perform();
 		directoryTab.click();

@@ -35,7 +35,7 @@ public class base {
 		System.out.println(browserName);
 
 		if (browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", ".\\src\\main\\java\\com\\qa\\resources\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", ".\\src\\main\\java\\com\\qa\\chromedriver.exe");
 			driver = new ChromeDriver();
 			// execute in chrome driver
 		} else if (browserName.equals("firefox")) {
