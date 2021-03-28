@@ -33,6 +33,11 @@ public class LoginPageTest extends base {
 		objLoginPage.ValidateUnSuccessfullLogin();
 	}
 	
+
+	public void NewAdded() throws InterruptedException {
+		//Demo
+	}
+	
 	@AfterTest
 	public void tearDown() throws IOException {
 		driver.quit();
