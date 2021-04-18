@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29334" started-at="2021-02-13T14:07:27Z" finished-at="2021-02-13T14:07:56Z">
+  <suite name="Default suite" duration-ms="21453" started-at="2021-04-18T07:42:48Z" finished-at="2021-04-18T07:43:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="29334" started-at="2021-02-13T14:07:27Z" finished-at="2021-02-13T14:07:56Z">
+    <test name="Default test" duration-ms="21453" started-at="2021-04-18T07:42:48Z" finished-at="2021-04-18T07:43:09Z">
       <class name="com.qa.testCases.LoginPageWindowHandlerTest">
-        <test-method status="PASS" signature="initMe()[pri:0, instance:com.qa.testCases.LoginPageWindowHandlerTest@464bee09]" name="initMe" is-config="true" duration-ms="15801" started-at="2021-02-13T14:07:27Z" finished-at="2021-02-13T14:07:43Z">
+        <test-method status="PASS" signature="initMe()[pri:0, instance:com.qa.testCases.LoginPageWindowHandlerTest@464bee09]" name="initMe" is-config="true" duration-ms="9803" started-at="2021-04-18T07:42:48Z" finished-at="2021-04-18T07:42:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initMe -->
-        <test-method status="PASS" signature="HandlerLoginPage()[pri:0, instance:com.qa.testCases.LoginPageWindowHandlerTest@464bee09]" name="HandlerLoginPage" duration-ms="12488" started-at="2021-02-13T14:07:43Z" finished-at="2021-02-13T14:07:55Z">
+        <test-method status="PASS" signature="HandlerLoginPage()[pri:0, instance:com.qa.testCases.LoginPageWindowHandlerTest@464bee09]" name="HandlerLoginPage" duration-ms="10794" started-at="2021-04-18T07:42:58Z" finished-at="2021-04-18T07:43:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HandlerLoginPage -->
-        <test-method status="PASS" signature="closeMe()[pri:0, instance:com.qa.testCases.LoginPageWindowHandlerTest@464bee09]" name="closeMe" is-config="true" duration-ms="998" started-at="2021-02-13T14:07:55Z" finished-at="2021-02-13T14:07:56Z">
+        <test-method status="PASS" signature="closeMe()[pri:0, instance:com.qa.testCases.LoginPageWindowHandlerTest@464bee09]" name="closeMe" is-config="true" duration-ms="824" started-at="2021-04-18T07:43:08Z" finished-at="2021-04-18T07:43:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeMe -->
