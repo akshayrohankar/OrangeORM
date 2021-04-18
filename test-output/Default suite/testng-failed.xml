@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.testCases.LoginPageWindowHandlerTest">
+      <class name="com.qa.testCases.RecruitmentPageTest">
         <methods>
+          <include name="searchCandidates"/>
           <include name="initMe"/>
-          <include name="HandlerLoginPage"/>
-          <include name="closeMe"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.qa.testCases.LoginPageWindowHandlerTest -->
+      </class> <!-- com.qa.testCases.RecruitmentPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

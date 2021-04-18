@@ -17,7 +17,7 @@ public class RecruitmentPageTest extends base {
 		initializeDriver();
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void searchCandidates() throws InterruptedException, IOException {
 		LoginPage loginPage = new LoginPage();
 		loginPage.LoginProcess();

@@ -1,5 +1,7 @@
 package com.qa.pageObjects;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -84,10 +86,10 @@ public class RecruitmentPage extends base {
 	@FindBy(xpath = "//span[@id='spanMessage']")
 	public WebElement invalidLoginMsg;
 
-	public void addCandidates() {
+	public void addCandidates() throws InterruptedException {
 		Xls_Reader reader = new Xls_Reader(".\\src\\main\\java\\com\\qa\\resources\\testData.xlsx");
 		int countRow = reader.getRowCount("CandidateData");
-		for (int i = 2; i < countRow; i++) {
+		for (int i = 2; i <= countRow; i++) {
 			addBtn.click();
 			addCandidate_firstName.clear();
 			addCandidate_firstName.sendKeys(reader.getCellData("CandidateData", "First Name", i));
@@ -107,38 +109,43 @@ public class RecruitmentPage extends base {
 			addCandidate_appliedDate.click();
 			selectDate.click();
 			addCandidate_consentToKeepData.click();
+			Thread.sleep(2000);
 			saveCandidateBtn.click();
+			Thread.sleep(2000);
 			backToAddCandidate.click();
+			Thread.sleep(4000);
 		}
 	}
 
 	public void searchCandidates() {
 
-		Xls_Reader reader = new Xls_Reader(".\\src\\main\\java\\com\\qa\\resources\\testData.xlsx");
+		Xls_Reader reader = new Xls_Reader(".\\src\\main\\java\\com\\qa\\resources\\testData-Search.xlsx");
 		// int count = reader.getRowCount("testdata");
 		jobTitle.click();
 		Select sel = new Select(jobTitle);
-		sel.selectByVisibleText(reader.getCellData("testdata", "Job Title", 2));
+		sel.selectByVisibleText(reader.getCellData("CandidateData", "Job Title", 2));
 		vacancy.click();
 		Select sel1 = new Select(vacancy);
-		sel1.selectByVisibleText(reader.getCellData("testdata", "Vacancy", 2));
+		sel1.selectByVisibleText(reader.getCellData("CandidateData", "Vacancy", 2));
 		hiringManager.click();
 		Select sel2 = new Select(hiringManager);
-		sel2.selectByVisibleText(reader.getCellData("testdata", "Hiring Manager", 2));
+		sel2.selectByVisibleText(reader.getCellData("CandidateData", "Hiring Manager", 2));
 		status.click();
 		Select sel3 = new Select(status);
-		sel3.selectByVisibleText(reader.getCellData("testdata", "Status", 2));
+		sel3.selectByVisibleText(reader.getCellData("CandidateData", "Status", 2));
 		candidateName.clear();
-		candidateName.sendKeys(reader.getCellData("testdata", "Candidate Name", 2));
+		candidateName.sendKeys(reader.getCellData("CandidateData", "Candidate Name", 2));
+		candidateName.sendKeys(Keys.ENTER);
+		keywords= driver.findElement(By.xpath("//input[@id='candidateSearch_keywords']"));
 		keywords.clear();
-		keywords.sendKeys(reader.getCellData("testdata", "Keywords", 2));
+		keywords.sendKeys(reader.getCellData("CandidateData", "Keywords", 2));
 		fromDate.clear();
-		fromDate.sendKeys(reader.getCellData("testdata", "Date of Application", 2));
+		fromDate.sendKeys(reader.getCellData("CandidateData", "Date of Application", 2));
 		toDate.clear();
-		toDate.sendKeys(reader.getCellData("testdata", "To", 2));
+		toDate.sendKeys(reader.getCellData("CandidateData", "To", 2));
 		methodAppl.click();
 		Select sel4 = new Select(methodAppl);
-		sel4.selectByVisibleText(reader.getCellData("testdata", "Method of Application", 2));
+		sel4.selectByVisibleText(reader.getCellData("CandidateData", "Method of Application", 2));
 		searchBtn.click();
 	}
 }
